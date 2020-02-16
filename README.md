@@ -1,4 +1,4 @@
-# ChaturbateDownloader
+# ChaturbateWatcher
 
 A CLI Chaturbate.com downloader that allows you to download streams as they are live in the highest quality available without the weird layers on top of the screen, upon email notification without further interaction while you are doing other things.
 
