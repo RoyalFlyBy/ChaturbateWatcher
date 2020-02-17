@@ -1,1 +1,22 @@
-{"imapHost":"imap.example.com","imapPort":993,"ssl":true,"email":"royalflyby@example.com","password":"RoyalPassword","mailbox":"INBOX","emailInterval":60,"ffmpegPath":"ffmpeg","debug":false,"help":{"imapHost":"(string) IMAP hostname of your email provider","imapPort":"(int) The port the IMAP server, usually 143 or 993 for IMAP over SSL","ssl":"(boolean) Nowadays this is \"true\" in most cases but in theory you could use insecure IMAP if you really wanted to","email":"(string) Email address linked to the Chaturbate account","password":"(string) The password of said email address","mailbox":"(string) usually \"INBOX\" but you can create a dedicated folder (MAKE SURE THE NOTIFICATIONS DON'T GO TO SPAM FOLDER)","emailInterval":"(int) interval in seconds of time in between checking for emails","ffmpegPath":"(string) path to the ffmpeg.exe executable, by default \"ffmpeg\" if it was added to the system path variables","debug":"(boolean) by default \"false\" but if you facing issues you may wanna turn it into \"true\""}}
+{
+    "imapHost": "imap.example.com",
+    "imapPort": 993,
+    "ssl": true,
+    "email": "royalflyby@example.com",
+    "password": "RoyalPassword",
+    "mailbox": "INBOX",
+    "emailInterval": 60,
+    "ffmpegPath": "ffmpeg",
+    "debug": false,
+    "help": {
+        "imapHost": "(string) IMAP hostname of your email provider",
+        "imapPort": "(int) The port the IMAP server, usually 143 or 993 for IMAP over SSL",
+        "ssl": "(boolean) Nowadays this is \"true\" in most cases but in theory you could use insecure IMAP if you really wanted to",
+        "email": "(string) Email address linked to the Chaturbate account",
+        "password": "(string) The password of said email address",
+        "mailbox": "(string) usually \"INBOX\" but you can create a dedicated folder (MAKE SURE THE NOTIFICATIONS DON'T GO TO SPAM FOLDER)",
+        "emailInterval": "(int) interval in seconds of time in between checking for emails",
+        "ffmpegPath": "(string) path to the ffmpeg.exe executable, by default \"ffmpeg\" if it was added to the system path variables",
+        "debug": "(boolean) by default \"false\" but if you facing issues you may wanna turn it into \"true\""
+    }
+}
