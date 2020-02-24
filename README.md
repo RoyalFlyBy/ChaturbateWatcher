@@ -1,4 +1,4 @@
-# ChaturbateWatcher
+# ChaturbateDownloader
 
 A CLI Chaturbate.com downloader that allows you to download streams as they are live in the highest quality available without the weird layers on top of the screen, upon email notification without further interaction while you are doing other things.
 
@@ -16,11 +16,76 @@ This program doesn't take any flags other than where to find the settings.json f
 
 Depends on FFmpeg (static).
 
+##### IMAP setup
 IMAP configuration guides:
 * [Outlook](https://support.office.com/en-us/article/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040)
 * [GMail (may need to enable insecure app access or per app passwords as well)](https://support.google.com/mail/answer/7126229?hl=en)
 * [ProtonMail](https://protonmail.com/bridge/outlook2013)
 
+What do these guides mean?
+
+Well these guides allow you to extract some information needed to hook this program to your inbox.
+
+The information you should extract are the ip or hostname of IMAP server and the port it runs on.
+
+Examples of data (taken from the pages above as of 23rd Feb 2020):
+* PROVIDER: HOST:PORT
+* Outlook: outlook.office365.com:993
+* Gmail: imap.gmail.com:993
+
+Now that you have that data how do you use it? You have to put the data you found into the settings.json.
+
+Sample settings:
+```
+{
+    "imapHost": "imap.example.com",
+    "imapPort": 993,
+    "ssl": true,
+    "email": "royalflyby@example.com",
+    "password": "RoyalPassword",
+    "mailbox": "INBOX",
+    "emailInterval": 60,
+    "ffmpegPath": "ffmpeg",
+    "debug": false,
+}
+```
+For Outlook:
+```
+{
+    "imapHost": "outlook.office365.com",
+    "imapPort": 993,
+    "ssl": true,
+    "email": "royalflyby@outlook.com",
+    "password": "RoyalPassword",
+    "mailbox": "INBOX",
+    "emailInterval": 60,
+    "ffmpegPath": "ffmpeg",
+    "debug": false,
+}
+```
+For Gmail:
+```
+{
+    "imapHost": "imap.gmail.com",
+    "imapPort": 993,
+    "ssl": true,
+    "email": "royalflyby@gmail.com",
+    "password": "RoyalPassword",
+    "mailbox": "INBOX",
+    "emailInterval": 60,
+    "ffmpegPath": "ffmpeg",
+    "debug": false,
+}
+```
+After that is done you can just enter your email address and password and hit save to actually save the settings.json in whatever text editor you used.
+
+IMPORTANT NOTE:
+
+This program WILL read all emails that come into the mailbox specified of the email address specified. 
+
+As this program is not open source even I myself would be wary for malicious acts so if you are going to use this program PLEASE use a DEDICATED email, an email address YOU ONLY USE FOR THIS and NOTHING ELSE. 
+
+This way there are no privacy concerns.
 ##### Examples
 
 Imagine the link of stream being: ``https://chaturbate.com/mykinkydope/``
@@ -72,9 +137,12 @@ I don't plan to maintain this unless something breaks due to chaturbate site upd
 
 ##### Unsupported
 * Private streams
+* Password streams
 
 Why? Unlike the PHDownloader I have no account to test this feature with therefore had no way of implementing it.
 
 Want them to be implemented? I will need to be able to do some testing, donating money or an account with tokens towards that goal would allow me to implement those cool things.
+
+For password shows I would need a password; not money or an account with tokens.
 
 Simply open up an issue and we will figure it out from there. 
